@@ -10,7 +10,8 @@ import DashboardRoutes from './Dashboards'
 import UiElementRoutes from './UiElements'
 import ExtensionsRoutes from './Extensions'
 import PageLayoutsRoutes from './PageLayouts'
-import TuckShopRoutes from './TuckShop'
+// import TuckShopRoutes from './TuckShop'
+import LaundryRoutes from './Laundry'
 
 // ** Document title
 const TemplateTitle = '%s - Tuck Shop App'
@@ -23,7 +24,8 @@ const Routes = [
   ...DashboardRoutes,
   ...AppiaRoutes,
   ...InvoiceAppRoutes,
-  ...TuckShopRoutes,
+  // ...TuckShopRoutes,
+  ...LaundryRoutes,
   ...AppRoutes,
   ...PagesRoutes,
   ...UiElementRoutes,

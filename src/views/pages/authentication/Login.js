@@ -77,11 +77,11 @@ const Login = props => {
   const ability = useContext(AbilityContext)
   const dispatch = useDispatch()
   const history = useHistory()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('adelugba.emma@gmail.com')
+  const [password, setPassword] = useState('000000')
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const illustration = skin === 'dark' ? 'wexford-banner-1.jpg' : 'wexford-banner-1.jpg',
+  const illustration = skin === 'dark' ? 'login-v2-dark.svg' : 'login-v2.svg',
     source = require(`@src/assets/images/pages/${illustration}`).default
 
   const handleSubmit = async (event, errors) => {
@@ -92,14 +92,13 @@ const Login = props => {
         .then(res => {
           if (res.data.success) {
             const data = {
-              ...res.data.admin,
+              ...res.data.user,
               accessToken: res.data.token,
               refreshToken: res.data.token,
               ability: [{ action: "manage", subject: "all" }],
               avatar: "/demo/Appia-react-admin-dashboard-template/demo-1/static/media/avatar-s-11.1d46cc62.jpg",
               extras: { eCommerceCartItemsCount: 5 }
             }
-            console.log('data', data)
             dispatch(handleLogin(data))
             ability.update(data.ability)
             toast.success(
@@ -127,7 +126,7 @@ const Login = props => {
       <Row className='auth-inner m-0'>
         <Link className='brand-logo' to='/' onClick={e => e.preventDefault()}>
           <img src={Logo} width='40' />
-          <h2 className='brand-text text-primary ml-1'>TuckShop</h2>
+          <h2 className='brand-text text-primary ml-1'>BizApp</h2>
         </Link>
         <Col className='d-none d-lg-flex align-items-center p-1' lg='8' sm='12'>
           <div className='w-100 d-lg-flex align-items-center justify-content-center px-5'>
@@ -137,7 +136,7 @@ const Login = props => {
         <Col className='d-flex align-items-center auth-bg px-2 p-lg-5' lg='4' sm='12'>
           <Col className='px-xl-2 mx-auto' sm='8' md='6' lg='12'>
             <CardTitle tag='h2' className='font-weight-bold mb-1'>
-              Welcome to TuckShop 👋
+              Welcome to BizApp 👋
             </CardTitle>
             <CardText className='mb-2'>Please sign-in to your account and start the adventure</CardText>
             <AvForm className='auth-login-form mt-2' onSubmit={handleSubmit}>
@@ -184,6 +183,12 @@ const Login = props => {
                 <span className='ml-50'>Sign In</span>
               </Button.Ripple>
             </AvForm>
+            <p className='text-center mt-2'>
+              <span className='mr-25'>New on our platform?</span>
+              <Link to='/register'>
+                <span>Create an account</span>
+              </Link>
+            </p>
           </Col>
         </Col>
       </Row>

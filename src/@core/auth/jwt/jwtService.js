@@ -97,11 +97,11 @@ export default class JwtService {
   // }
 
   login(...args) {
-    return axios.post(this.jwtConfig.tuckShopLoginEndpoint, ...args)
+    return axios.post(this.jwtConfig.laundryLoginEndpoint, ...args)
   }
 
   register(...args) {
-    return axios.post(this.jwtConfig.registerEndpoint, ...args)
+    return axios.post(this.jwtConfig.laundryRegisterEndpoint, ...args)
   }
 
   refreshToken() {

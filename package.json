@@ -99,7 +99,8 @@
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "lint": "eslint src/**/*.js src/**/*.jsx",
-    "lint:fix": "eslint src/**/*.js --fix"
+    "lint:fix": "eslint src/**/*.js --fix",
+    "app": "concurrently \"cd api && npm start\" \"serve -s build\""
   },
   "eslintConfig": {
     "extends": "react-app"

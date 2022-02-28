@@ -23,12 +23,12 @@ import appiaSettings from '@src/views/appia/settings/store/reducer'
 import appiaEscrow from '@src/views/appia/escrow/store/reducer'
 import appiaTransfers from '@src/views/appia/transfers/store/reducer'
 
-import students from '@src/views/tuck-shop/student/store/reducer'
-import kitchenStaffs from '@src/views/tuck-shop/kitchen-staffs/store/reducer'
-import admins from '@src/views/tuck-shop/admin/store/reducer'
-import products from '@src/views/tuck-shop/product/store/reducer'
-import orders from '@src/views/tuck-shop/order/store/reducer'
-import transactions from '@src/views/tuck-shop/transaction/store/reducer'
+import clients from '@src/views/laundry/clients/store/reducer'
+import kitchenStaffs from '@src/views/laundry/kitchen-staffs/store/reducer'
+// import admins from '@src/views/laundry/admin/store/reducer'
+import services from '@src/views/laundry/services/store/reducer'
+import orders from '@src/views/laundry/order/store/reducer'
+// import transactions from '@src/views/laundry/transaction/store/reducer'
 
 import email from '@src/views/apps/email/store/reducer'
 // import invoice from '@src/views/apps/invoice/store/reducer'
@@ -43,11 +43,11 @@ const rootReducer = combineReducers({
   chat,
   email,
   users,
-  students,
+  clients,
   kitchenStaffs,
-  admins,
-  products,
-  transactions,
+  // admins,
+  services,
+  // transactions,
   orders,
   appiaFunds,
   appiaWithdrawals,

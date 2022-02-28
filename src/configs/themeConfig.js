@@ -3,7 +3,7 @@
 //Template config options
 const themeConfig = {
   app: {
-    appName: 'TuckShop',
+    appName: 'BizApp',
     appLogoImage: require('@src/assets/images/logo/favicon.png').default
   },
   layout: {
