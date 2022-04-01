@@ -128,7 +128,7 @@ const Cart = (props) => {
 		services: products,
 		clientId: selectedOption,
 		discount: 0,
-		tax: 7.5,
+		tax: 0,
 		shipping: 0,
 		amountPaid: 0,
 	})
