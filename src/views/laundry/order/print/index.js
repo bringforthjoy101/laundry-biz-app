@@ -30,6 +30,8 @@ const Print = () => {
 	console.log(selectedOrder)
 
 	const renderTable = (services) => {
+		console.log(services)
+		services = process.env.NODE_ENV === 'production' ? JSON.parse(services) : JSON.parse(services)
 		return services.map((service) => {
 			return (
 				<tr key={service.id}>
